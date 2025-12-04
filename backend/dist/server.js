@@ -7,10 +7,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const env_1 = require("./config/env");
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const adminDistPathFromPath = path_1.default.join(__dirname, "../../admin/dist");
 const adminDistPathFromPathFile = path_1.default.join(__dirname, "../../admin", "dist", "index.html");
+console.log("Does dist exist?", fs_1.default.existsSync(adminDistPathFromPath));
+console.log("Does index.html exist?", fs_1.default.existsSync(adminDistPathFromPathFile));
 console.log("from adminDistPath", adminDistPathFromPath);
 console.log("from adminDistPathFile", adminDistPathFromPathFile);
 app.get("/api/health", (req, res) => {

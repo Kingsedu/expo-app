@@ -2,6 +2,7 @@
 import { ENV } from "./config/env";
 import express from "express";
 import path from "path";
+import fs from "fs";
 
 const app = express();
 app.use(express.json());
@@ -12,7 +13,8 @@ const adminDistPathFromPathFile = path.join(
   "dist",
   "index.html",
 );
-
+console.log("Does dist exist?", fs.existsSync(adminDistPathFromPath));
+console.log("Does index.html exist?", fs.existsSync(adminDistPathFromPathFile));
 console.log("from adminDistPath", adminDistPathFromPath);
 console.log("from adminDistPathFile", adminDistPathFromPathFile);
 
