@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Kingsedu/expo-app#readme",
   "dependencies": {
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "cors": "^2.8.5"
   }
 }
