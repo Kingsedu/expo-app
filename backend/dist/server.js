@@ -8,6 +8,7 @@ const env_1 = require("./config/env");
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
 const adminDistPathFromPath = path_1.default.join(__dirname, "../../admin/dist");
 const adminDistPathFromPathFile = path_1.default.join(__dirname, "../../admin", "dist", "index.html");
 console.log("from adminDistPath", adminDistPathFromPath);
